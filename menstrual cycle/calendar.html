@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle Calendar - Menstrual Cycle Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Menstrual Cycle Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="journal.html">Journal</a></li>
+                <li><a href="calendar.html">Cycle Calendar</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="community.html">Community Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Cycle Calendar</h2>
+        <form id="cycleForm">
+            <input type="date" id="startDateInput" required>
+            <input type="number" id="cycleLengthInput" placeholder="Cycle Length (Days)" required>
+            <button type="submit">Save Cycle</button>
+        </form>
+        <h3>Saved Cycle Information</h3>
+        <div id="savedCycleInfo"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Menstrual Cycle Tracker</p>
+    </footer>
+</body>
+</html>

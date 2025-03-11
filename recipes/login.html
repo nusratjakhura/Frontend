@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid black;
+            border-radius: 20px;
+            background: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background: lightgray;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-btn {
+            background: gray;
+            color: white;
+            border: none;
+        }
+        .login-btn:hover {
+            background: darkgray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="selection">
+        <h2>Log in or Sign up As</h2>
+        <button class="button" onclick="showLogin('HR')">H R</button>
+        <p>Or</p>
+        <button class="button" onclick="showLogin('Candidate')">Candidate</button>
+    </div>
+
+    <div class="container" id="login" style="display: none;">
+        <h2>Log in</h2>
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+        <input type="email" placeholder="Work Email">
+        <input type="password" placeholder="Password">
+        <p><a href="#">Forgot your password?</a></p>
+        <button class="button login-btn">Log in</button>
+    </div>
+
+    <script>
+        function showLogin(userType) {
+            document.getElementById('selection').style.display = 'none';
+            document.getElementById('login').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
